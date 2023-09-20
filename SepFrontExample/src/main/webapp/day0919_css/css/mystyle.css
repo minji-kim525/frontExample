@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+div{border:5px solid gray;
+	padding: 15px;} /*padding : 내용과 경계선 사이의 여백*/
+p{color:dodgerblue !important;}

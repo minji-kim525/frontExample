@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>자식 자손 태그</title>
+</head>
+<style>
+	li span{color: blue;}/* ' ': 자식자손, '>': 자식,'+': 형제 중 아래 '~': 아래 형제 모두*/
+	#second~li{color:darkorange;}
+	li *{color : deeppink;}/*모든 자손*/
+ 	p .a{color:blue}
+ 	p.a{color:darkgreen}
+</style>
+<body>
+	
+	<ul>
+		<li id="first"><strong>text<span>text</span>text</strong>texttexttexttext</li>
+		<li id="second"><span>text</span>texttexttexttext</li>
+		<li id="third">texttexttexttexttext</li>
+		<li id="fourth">texttexttexttexttext</li>
+	</ul>
+</body>
+
+</html>

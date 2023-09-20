@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>레드향 주문하기</title>
+</head>
+
+<body>
+	<h1>레드향 주문하기</h1>
+	<div id="container">
+		<form>
+			<fieldset>
+				<legend>상품 선택</legend>
+				<p><b>주문할 상품을 선택해주세요.</b></p>
+				<ul>
+					<li><input type="checkbox" value="p_3" name="mandarin">
+						<label for="p_3">선물용 3kg</label>
+						<input type="number" name="p3_count" min="0" max="5">개
+						<small>(최대 5개)</small>
+					</li>
+					<li><input type="checkbox" value="p_5" name="mandarin">
+						<label for="p_5">선물용 5kg</label>
+						<input type="number" name="p5_count" min="0" max="3">개
+						<small>(최대 3개)</small>
+					</li>
+					<li><input type="checkbox" value="f_3" name="mandarin">
+						<label for="f_3">가정용 3kg</label>
+						<input type="number" name="f3_count" min="0" max="5">개
+						<small>(최대 5개)</small>
+					</li>
+					<li><input type="checkbox" value="f_5" name="mandarin">
+						<label for="f_5">가정용 5kg</label>
+						<input type="number" name="f5_count" min="0" max="3">개
+						<small>(최대 3개)</small>
+					</li>
+
+				</ul>
+				<p><b>포장 선택</b></p>
+				<ul>
+					<li><label><input type ="radio" name="gift" value="y">선물 포장</label></li>
+					<li><label><input type ="radio" name="gift" value="n">선물 포장 안함</label></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>배송 정보</legend>
+				<ul>
+					<li>이름 <input name="username"></li>
+					<li>배송 주소 <input name="addr"></li>
+					<li>이메일 <input type = "email" name="email"></li>
+					<li>연락처 <input name="tel" pattern ="010 -[0-9]{4}-[0-9]{4}"></li>
+					<li>배송 지정 <input type = "date" name="d-day"><small>(주문일로부터 최소 3일 이후)</small></li>
+					<li>메모
+						<textarea name ="memo" cols="40" rows="4"></textarea>
+					</li>
+				</ul>
+			</fieldset>
+			<input type = "submit" value="주문하기">
+			<input type = "reset" value="취소하기">
+		</form>
+	</div>
+</body>
+
+</html>

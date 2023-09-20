@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class ="container">
+		<form>
+			<h4>개인 정보</h4>
+			<ul>
+				<li><label for="name">이름</label>
+						<input id ="name" name="name" autofocus placeholder="공백없이 입력하세요">
+				</li>
+				<li>
+					<label for = "phone">연락처</label>
+					<select name ="p1" id ="phone">
+						<option value = "010">010</option>
+						<option value = "011">011</option>
+						<option value = "016">016</option>
+						<option value = "019">019</option>
+					</select>
+					<input name = "p2" size="5">-<input name ="p3" size="5">
+				</li>
+				<li>
+					<label for="male">남</label>
+					<input type="radio" id="male" name ="gender" value="male">
+					<label for="female">여</label>
+					<input type="radio" id="female" name ="gender" value="female">
+				</li>
+			</ul>
+			<h4>지원 분야</h4>
+			<ul>
+				<li><label><input type ="checkbox" name ="career" value="wp">웹 퍼블리싱</label></li>
+				<li><label><input type ="checkbox" name ="career" value="dev">웹 어플리케이션</label></li>
+				<li><label><input type ="checkbox" name ="career" value="eng">개발 환경 개선</label></li>
+			</ul>
+			
+			<h4>지원 동기</h4>
+			<textarea name = "motive" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써주세요"></textarea>
+			<div>
+				<input type="submit" value="접수하기">
+				<input type="reset" value="다시쓰기">

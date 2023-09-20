@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스타일 우선순위</title>
+</head>
+<style>
+	body{color: deepskyblue}
+	#div1{color: blueviolet;}
+	.dclass{color:aqua /*!important*/}
+	div{color: salmon}
+	p{color:crimson}
+</style>
+<body>
+<div id="div1" class="dclass">
+	이 태그는 div태그 입니다.
+</div>
+<p>
+	이 태그는 p태그 입니다.
+	<span>
+		자식 span태그 입니다.
+	</span>
+</p>
+<h1>이 태그는 h1태그이고 body의 자식태그입니다.</h1>
+</body>
+</html>
