@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+	#container{
+		position: relative;
+		background-color:cornflowerblue;
+		width: 500px;
+		height: 100px;
+	}
+	#one{
+		background-color:yellowgreen;
+		width:200px;
+		height:50px;
+	}
+	#two{
+		position: absolute; /*부모기준, 부모가 relative이어야 absolute 가능, body태그의 기본값은 glyph-orientation-vertical;*/
+		left:50px;
+		top:20px;
+		background-color:aquamarine;
+		width:200px;
+		height:50px;
+	}
+	#three{
+		background-color:teal;
+		width:200px;
+		height:50px;
+	}
+	</style>
+
+</head>
+
+<body>
+	<p id="one">block #1</p>
+	<div id="container">
+		<div id="two">block #2</div>
+	</div>
+	<p id="three">block #3</p>
+</body>
+
+</html>
