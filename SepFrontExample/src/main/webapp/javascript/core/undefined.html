@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		let a;//변수를 초기화하지 않으면 undefined 저장
+		document.write(a + "<br>");
+		document.write("typeof a :" + typeof a);
+		document.write("<br>");
+		let b = null;
+		document.write(b + "<br>");
+		document.write("typeof b :" + typeof b);
+		//자바스크립트 객체 선언
+		let obj = {name: "kim", age: 10};
+		document.write(obj.age+ "<br>");
+		document.write(obj.id+ "<br>");
+		//객체 안에 없는 속성값을 출력 -> undefined
+		
+		function printValue(v1,v2){
+			document.write("v1 : "+v1+" ,v2 : "+v2);
+			
+		}
+		printValue(10);
+		//함수의 매개변수에 값이 전달되지 않았다면 ->undefined
+	</script>
+
+</body>
+
+</html>

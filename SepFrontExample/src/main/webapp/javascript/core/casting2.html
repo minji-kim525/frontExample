@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	이름(필수항목) : <input name="name" id ="name" placeholder="이름">
+	<button type="button" onclick="check()">확인</button>
+	<p id ="result"></p>
+	<script>
+		function check(){
+			let name = document.querySelector("#name").value;
+			if(name){
+				document.querySelector("#result").innerHTML=name+" 이름을 입력했습니다.";
+			}else{
+				document.querySelector("#result").innerHTML="이름을 입력하지 않았습니다.";
+			}
+			
+		}
+	</script>
+
+</body>
+</html>

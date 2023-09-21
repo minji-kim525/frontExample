@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		document.write("'52'== 52 : " + ('52' == 52) + "<br>");
+		document.write("'52'=== 52 : " + ('52' === 52) + "<br>");
+		document.write("<br>");
+		document.write("0 == ''"+(0 == '')+"<br>");
+		document.write("0 === ''"+(0 === '')+"<br>");
+		document.write("0 < true :"+(0< true)+"<br>");
+		document.write("8 < 11 :"+(8 < 11)+"<br>");
+		document.write("'8' < '11' :"+('8' < '11')+"<br>");
+		// 문자열도 비교 가능 8과 1을 비교했기때문에 false
+		document.write("8 < '11' :"+(8 < '11')+"<br>");
+		// 타입이 다를때는 숫자로 바꿔서 비교 같으면 그 자체로 비교
+		document.write("!'test' : "+(!'test')+"<br>");
+	</script>
+
+</body>
+
+</html>
