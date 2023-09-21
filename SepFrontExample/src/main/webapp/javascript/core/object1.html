@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		let student = {
+			name : "kim", study: function() {alert(this.name+"공부중!");},
+			play: () => alert(this.name+"노는 중!!")
+		};
+		
+		student.study();
+		let user = {name: "js", age: 20};
+
+		document.write(typeof user + "<br>");
+		document.write(user + "<br>");
+		console.log(user);
+		document.write("<br>");
+		//property읽기
+		document.write(user.name + "<br>");
+		document.write(user['name'] + "<br>");
+		let p_n = 'age';
+		document.write(user[p_n] + "<br>");//[]에서 ''가 없으면 변수를 찾는다.
+		//user[name]은 error name이라는 변수가 없으므로
+		document.write("<br>");
+		for (u in user) {// 객체 안에 있는 프로퍼티이름(string)을 하나씩 꺼내옴
+			document.write(u + " : " + typeof u + "<br>");
+			document.write(user[u] + "<br>");
+		}
+		user.age = 40;
+		for (u in user) {
+			document.write(user[u] + "<br>");
+		}
+		user.job = "programmer";//프로퍼티 추가
+		for (u in user) {
+			document.write(u + "user[u]" + "<br>");
+		}
+		document.write("<br>");
+
+		delete user.job; //프로퍼티 삭제
+		for (u in user) {
+			document.write(u + " : " + user[u] + "<br>");
+		} document.write("<br>");
+
+		delete user.job;
+		for (u in user) {
+			document.write(u + " : " + user[u] + "<br>");
+		}
+	</script>
+
+</body>
+
+</html>

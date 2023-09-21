@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	 class Fruit{
+		 constructor(name, price){//생성자 - 객체 생성시 자동 호출
+		 							//값을 저장할 프로퍼티 선언
+			this.name = name;
+			this.price = price;
+		}
+		 calcPrice(count = 0){// 메서드 선언 function 생략
+		 					//count에 값이 들어오지 않으면 0(default값)
+			 return count * this.price;
+		 }
+	 }
+
+	let banana = new Fruit("banana", 1500);
+	document.write(banana.name+" 5개 가격 : "+ banana.calcPrice(5)+"원");
+	document.write("<br>");
+	let melon = new Fruit("melon", 7000);
+	document.write(melon.name+" 2개 가격 : "+ melon.calcPrice(2)+"원");
+	
+
+</script>
+</body>
+</html>

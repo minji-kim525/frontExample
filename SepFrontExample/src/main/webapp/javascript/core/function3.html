@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		let func = () => {return 10;}
+		let number = func();
+		alert(number);
+
+		let age = prompt("나이를 입력하세요");
+		let welcome = age < 20 ? () => {alert('안녕')} : () => {alert('안녕하세요')};
+
+		welcome();
+
+		let pow = (n) => {return n * n;}
+		alert(pow(5));
+
+		let pow2 = (n, m) => {
+			let result = n;
+			for (i = 1; i < m; i++) {
+				result *= n;
+			}
+			return result;
+		}
+
+		alert(pow2(2, 5));
+	</script>
+</body>
+
+</html>

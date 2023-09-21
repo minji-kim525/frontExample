@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>new document</title>
+<SCRIPT>
+	let scope = "global";
+	function checkscope() {
+		let scope = "local";
+		document.write(scope);//지역에서는 지역이 우선 -> 함수 끝나면 메모리 반환
+	}
+	checkscope();
+	document.write("<br>");
+	document.write(scope); //global
+</SCRIPT>
+</head>
+<body>
+</body>
+</html>

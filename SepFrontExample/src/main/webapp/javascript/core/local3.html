@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>new document</title>
+<SCRIPT>
+	let scope = "global";
+	function f() {
+		// var scope; - 호이스팅
+		alert(scope);//undefined 선언부만 올라갔기 때문
+		var scope = "local";
+		alert(scope);
+	}
+	f();
+	
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

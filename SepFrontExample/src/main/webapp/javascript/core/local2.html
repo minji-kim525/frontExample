@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>new document</title>
+<SCRIPT>
+	let scope = "global";
+	function checkscope() {
+		scope = "local"; //전역변수를 가져다 쓴것
+		document.write(scope+"<br>");
+		myscope = "mylocal"; //선언된적이 없고, let var이 없으면 전역변수로 선언
+		document.write(myscope+"<br>");
+	}
+	checkscope();
+	document.write(scope+"<br>");
+	document.write(myscope+"<br>");
+</SCRIPT>
+</head>
+
+<body>
+
+</body>
+</html>

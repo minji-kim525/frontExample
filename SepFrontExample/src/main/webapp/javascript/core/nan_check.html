@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	let num =prompt("숫자를 입력하세요");
+	 
+	 // 숫자로만 이루어진 문자열 -> false(숫자로 변경 가능)
+	 // 숫자가 아닌 문자가 하나라도 있으면 -> NaN -> true(숫자로 변경 불가)
+	 
+	 if(isNaN(num)){
+		 let n=parseInt(num);
+		 document.write(n+"<br>");
+		 document.write(typeof num);
+	 }else{
+		 let n=parseInt(num);
+		 document.write(typeof num);
+		 document.write(typeof n);
+	 }
+</script>
+</body>
+</html>
