@@ -16,7 +16,12 @@ function checkSpam(str) {
 	 // return reg1.test(lowerStr) || reg2.test(lowerStr);
 	  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
 	}
-
+	if(checkSpam('buy ViAgRA now')){
+		document.write("₩'buy ViAgRA now₩' is a spam");
+	}else{
+		document.write("₩'buy ViAgRA now₩' is not a spam");
+		
+	}
 	alert( checkSpam('buy ViAgRA now') );  
 	alert( checkSpam('free xxxxx') );
 	alert( checkSpam("innocent rabbit") );
