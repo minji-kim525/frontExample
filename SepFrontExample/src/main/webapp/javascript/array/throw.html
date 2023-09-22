@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>throw</title>
+</head>
+<body>
+<script>
+	try{
+	let jsonData='{"name":"john"}';//JSON : js객체 형태 - 문자열 
+	let user = JSON.parse(jsonData);//문자열 -> 객체
+	alert(user.name);
+	
+	if(!user.age){
+		throw new Error("age 프로퍼티 없음");
+	}
+	alert(user.age);
+	
+	}catch(e){
+		
+		alert("올바른 데이터가 아닙니다.");
+		alert(e);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>Number Guess</h1>
+	<p>1부터 100 사이의 숫자를 입력하시오.</p>
+	<input id="number" type="text">
+	<button type="button" onclick="test()">숫자 추측</button>
+	<p id="message"></p>
+	<script>
+		let solution = Math.ceil(Math.random() * 100); // 정답 ceil: 올림
+		console.log("solution : " + solution);
+		function test() {
+			try {
+				let x = document.getElementById("number").value;//id가 number인 요소를 가져옴
+				//js는 태그도 하나의 객체로 다룬다.
+				if (x == "") throw "입력없음";
+				if (isNaN(x)) throw "숫자가 아님";
+				if (x > solution) throw "너무 큼";
+				if (x < solution) throw "너무 작음";
+				if (x == solution) throw "성공";
+			}
+			catch (error) {
+				let y = document.getElementById("message");
+				y.innerHTML = "힌트: " + error;
+			}
+		}
+	</script>
+</body>
+
+</html>

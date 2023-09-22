@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+
+function checkSpam(str) {
+	  let lowerStr = str.toLowerCase();
+
+	  let reg1 = /viagra/;
+	  let reg2 = /x{2,}/g
+	  
+	 // return reg1.test(lowerStr) || reg2.test(lowerStr);
+	  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+	}
+
+	alert( checkSpam('buy ViAgRA now') );  
+	alert( checkSpam('free xxxxx') );
+	alert( checkSpam("innocent rabbit") );
+</script>
+</body>
+</html>

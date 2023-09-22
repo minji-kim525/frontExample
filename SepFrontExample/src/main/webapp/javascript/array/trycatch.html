@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	try{
+		alert("없는 함수 호출");
+		lalala;
+	}catch(e){
+		document.write("예외 발생 : "+e.discription+"<br>");
+		document.write("예외 메세지 : "+e.message+"<br>");
+		document.write("예외 이름 : "+e.name+"<br>");
+	}
+</script>
+</body>
+</html>
