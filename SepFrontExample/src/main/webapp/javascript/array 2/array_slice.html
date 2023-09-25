@@ -4,5 +4,12 @@
 	let newArray = numbers.slice(5);
 	document.writeln(newArray + '<BR>'); 
 	document.writeln(numbers + '<BR>'); 
+		
+	let newArray2 = numbers.splice(3,5);
+	document.writeln(newArray2 + '<BR>'); 
+	document.writeln(numbers + '<BR>'); 
+		
+	numbers.splice(1,0,100); //insert
+	numbers.splice(3,3,200,300); //replace
 	
 </script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="윈도우 이동(to)" onclick="toWindow()"/> <br>
+	<input type="button" value="윈도우 이동(by)" onclick="moveWindow()"/> <br>
+	
+
+
+<script>
+	let w = window.open(' ',' ','width=200','height=100');
+	
+	function toWindow(){
+		w.moveTo(0,0);//윈도우 기준
+	}
+	function moveWindow(){
+		w.moveBy(10,10);//현재 위치 기준
+		w.focus();
+	}
+</script>
+</body>
+</html>

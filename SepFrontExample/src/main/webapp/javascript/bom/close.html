@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h5>close.html문서입니다.</h5>
+	<input id="message"><br>
+	<button onclick="w_close()">닫기</button>
+	<script>
+		function w_close(){
+			let msg= window.document.querySelector("#message").value;//현재창
+			opener.document.querySelector("#message").innerHTML=msg;//opener: 현재 창을 열어준 창
+			self.close();//현재 창 닫기
+		}
+	</script>
+</body>
+</html>

@@ -1,12 +1,13 @@
 <meta charset="UTF-8">
 <script>
 	let numbers = [ 10, 20, 30, 40, 50 ];
-	//필터의 기준(콜백함수로 사용)
+	//필터의 기준(콜백함수로 사용)= boolean
 /* 	function isBigEnough(element, index, array) {
 		return (element >= 30);
 	} */
 	//콜백함수에서 true를 리턴하는 요소만으로 배열 생성
 	let filtered = numbers.filter(
 			(element, index, array) => {return (element >= 30)});
+	document.write("원본 배열: "+numbers+"<br>");
 	document.write("필터링 된 배열: " + filtered);
 </script>

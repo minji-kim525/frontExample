@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body onload="changeTextColor2();">
+	<div id="target">
+		<p>This is a Text.</p>
+	</div>
+	<button id="restart" onclick="changeTextColor2()">중지</button>
+	<script>
+		let id;
+		let flag = true;
+		function changeTextColor() {
+			if (flag) {
+				id = setInterval(flashText, 500);//ms 단위 0.5초
+				//setInterval : 일정간격으로 지속적으로 실행문을 실행시킨다.
+				flag = false;
+				document.getElementById("restart").innerHTML = "중지";
+			} else {
+				stopTextColor();
+				document.getElementById("restart").innerHTML = "실행";
+				flag = true;
+			}
+		}
+		function changeTextColor2() {
+			id = setInterval(flashText, 500);//ms 단위 0.5초
+			let elem = document.getElementById("restart");
+
+			if (elem.innerText == "실행") {
+				elem.innerHTML("중지");
+
+			} else {
+				clearInterval(id);
+				elem.innerHTML("실행");
+			}
+		}
+		function stopTextColor() {
+			clearInterval(id);
+		}
+
+		function flashText() {
+			let elem = document.querySelector("#target");
+			elem.style.color = (elem.style.color == "red") ? "blue" : "red";
+			elem.style.backgroundColor =
+				(elem.style.backgroundColor == "green") ? "yellow" : "green";
+		}
+
+
+	</script>
+
+</body>
+
+</html>
