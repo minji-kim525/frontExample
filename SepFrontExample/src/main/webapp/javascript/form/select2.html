@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<body>
+
+<form>
+  Select your favorite fruit:
+  <select>
+    <option id="apple">Apple</option>
+    <option id="orange">Orange</option>
+    <option id="pineapple" selected>Pineapple</option>
+    <option id="banana">Banana</option>
+  </select>
+</form>
+
+<p>Pineapple -> Orange</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("orange").selected = "true";
+}
+</script>
+
+</body>
+</html>

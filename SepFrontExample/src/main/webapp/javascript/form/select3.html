@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>당신의 나이대를 알려주세요</p>
+	<select id="age" onchange="checkAge()">
+		<option value="10">10대</option>
+		<option value="20" selected>20대</option>
+		<option value="30">30대</option>
+		<option value="40">40대 이상</option>
+	</select>
+	<p>선호하는 주류를 입력해주세요</p>    
+	<input id="drink" name="drink">
+	
+	<script>
+		function checkAge(){
+			let age = document.querySelector("#age").value;
+			if( age == "10"){
+				document.querySelector("#drink").value = "";
+				document.querySelector("#drink").disabled = true;
+			}else{
+				document.querySelector("#drink").disabled = false;
+			}
+		}
+	</script>
+	
+</body>
+</html>

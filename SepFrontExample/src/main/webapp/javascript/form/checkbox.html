@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<form name="myform" action="noaction">
+		<h1>드라이브 선택</h1>
+		<p>
+			<input type="checkbox" name="drive" value="A" onclick="clickCheck(this)">A 드라이브<br>
+			<input type="checkbox" name="drive" value="B" onclick="clickCheck(this)">B 드라이브<br>
+			<input type="checkbox" name="drive" value="C" onclick="clickCheck(this)">C 드라이브<br>
+			<input type="checkbox" name="drive" value="D" onclick="clickCheck(this)">D 드라이브<br>
+		</p> <!--this: 이벤트가 발생한 태그-->
+		<p>
+			<button type="button" onclick="checkedBox()">선택된 체크박스 확인하기</button>
+		</p>
+	</form>
+	<script>
+		function checkedBox() {
+			let boxes = document.myform.drive; //array
+			//console.log(typeof boxes); - object
+			let ch = '';
+			for (let i = 0; i < boxes.length; i++) {
+				if (boxes[i].checked) {
+					ch += boxes[i].value + "드라이브\n"
+				}
+			}
+			alert(ch);
+		}
+
+		function clickCheck(box) {
+			if (box.checked) {
+				alert(box.value + "드라이브 선택");
+			} else {
+				alert(box.value + "드라이브 선택 해제");
+			}
+		}
+	</script>
+</body>
+
+</html>

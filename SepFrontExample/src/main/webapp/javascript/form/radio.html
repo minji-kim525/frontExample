@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<FORM ACTION="nothingcgi">
+		<H1>드라이브 선택</H1>
+		<P>
+			<INPUT TYPE="radio" NAME="drive" VALUE="A" CHECKED> A 드라이브<BR>
+			<INPUT TYPE="radio" NAME="drive" VALUE="B"> B 드라이브<BR>
+			<INPUT TYPE="radio" NAME="drive" VALUE="C"> C 드라이브<BR>
+			<INPUT TYPE="radio" NAME="drive" VALUE="D"> D 드라이브
+		</P>
+		<!-- this.form : 이벤트가 발생한 태그를 가지고 있는 form태그  -->
+		<INPUT TYPE="button" VALUE="Check" onClick="findSelected(this.form)">
+	</FORM>
+	<SCRIPT>
+		//이름(name)이 같은 태그들은 name속성값을 배열 이름으로 해서 배열로 묶인다.
+		function findSelected(form) {
+			for (let i = 0; i < form.drive.length; i++) {
+				if (form.drive[i].checked) {
+					alert(form.drive[i].value + " 드라이브가 선택되었습니다.");
+					break;
+				}
+			}
+		}
+	</SCRIPT>
+
+</body>
+
+</html>

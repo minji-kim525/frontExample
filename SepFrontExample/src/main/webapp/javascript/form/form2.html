@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!--submit: onsubmit에 지정한 함수 실행(true/false 리턴)
+				("return false;"이 되면 실행 중지)
+				form에 입력한 데이터를 서버로 전송
+				action에 지정한 페이지 요청
+				return을 붙여야만 true false를 리턴할 수 있다.-->
+	<form name="myform" action="404.jsp" onsubmit="return beforeSubmit()">
+		이름: <input name="irum"> 
+		<input type="submit" value="submit">
+	</form>   
+	<script>
+		function beforeSubmit(){
+			return confirm("데이터를 보낼까요?");
+		}
+	</script>
+</body>
+</html>

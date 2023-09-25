@@ -12,11 +12,13 @@
 	<script>
 		function process(){
 			let array = document.querySelectorAll("input");//배열객체로 저장
-			for(let i=0;i<array.length;i++){
-				alert(array[i].value);
-				console.log(array[i].value);
+			//for(let i=0;i<array.length;i++){
+				//alert(array[i].value);
+			//}
+			for(obj in array){
+				console.log(array);
+				alert(array[obj].value);
 			}
-			
 		}
 	</script>
 </body>
