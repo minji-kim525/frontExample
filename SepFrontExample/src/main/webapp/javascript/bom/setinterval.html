@@ -6,11 +6,11 @@
 	<title>Insert title here</title>
 </head>
 
-<body onload="changeTextColor2();">
+<body onload="changeTextColor();">
 	<div id="target">
 		<p>This is a Text.</p>
 	</div>
-	<button id="restart" onclick="changeTextColor2()">중지</button>
+	<button id="restart" onclick="changeTextColor()">중지</button>
 	<script>
 		let id;
 		let flag = true;
@@ -27,8 +27,8 @@
 			}
 		}
 		function changeTextColor2() {
-			id = setInterval(flashText, 500);//ms 단위 0.5초
 			let elem = document.getElementById("restart");
+			id = setInterval(flashText, 500);//ms 단위 0.5초
 
 			if (elem.innerText == "실행") {
 				elem.innerHTML("중지");

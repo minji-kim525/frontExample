@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<body>
+	<img id="image" src="../../image/pome.png" width="120" height="100">
+
+	<input type="button" onclick="changeImage()" value="눌러보세요" />
+	<script>
+		function changeImage() {
+			document.getElementById("image").src = "../../image/cat.jpg";
+			document.getElementById("image").title = "고양이";
+			alert(document.getElementById("image").src);
+		}
+	</script>
+</body>
+</html>

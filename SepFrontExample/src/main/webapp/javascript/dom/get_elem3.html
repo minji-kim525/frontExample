@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>get_elem3</title>
+</head>
+<body>
+	<form name="myform">
+        <input type="text" id="target" name="text1"/>
+        <input type="submit" value="제출" onclick="process()"/>
+    </form>
+	<script>
+		function process(){
+			let array = document.querySelectorAll("input");//배열객체로 저장
+			for(let i=0;i<array.length;i++){
+				alert(array[i].value);
+				console.log(array[i].value);
+			}
+			
+		}
+	</script>
+</body>
+</html>

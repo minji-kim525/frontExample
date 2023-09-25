@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>get_nextSibling</title>
+<script>
+	function showMessage(input,str){
+		input.nextSibling.innerHTML=str;
+	}
+</script>
+</head>
+<body>
+	
+	<form name ="myform1">
+		이름 :<input type ="text"
+		onFocus="showMessage(this,'이름을 입력하시오')"><span></span> <br>
+		나이 :<input type ="text"
+		onFocus="showMessage(this,'나이를 입력하시오')"><span></span> <br>
+		주소 :<input type ="text"
+		onFocus="showMessage(this,'주소를 입력하시오')"><span></span> <br>
+	</form>
+
+</body>
+</html>
