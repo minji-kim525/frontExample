@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title></title>
+	</head>	 
+	<body>
+		<form name="form1">
+			<input name="check1" type="checkbox" value="1" onclick="checkNum(check1)">게임<br>  
+			<input name="check2" type="checkbox" value="2" onclick="checkNum(check2)">만화<br>
+			<input name="check3" type="checkbox" value="3" onclick="checkNum(check3)">음악<br>
+			<input name="check4" type="checkbox" value="4" onclick="checkNum(check4)">영화<br>
+			<input name="check5" type="checkbox" value="5" onclick="checkNum(check5)">운동<br>
+		</form>
+		<script>
+			const max = 3;
+			function checkNum(obj) {
+				//체크된 갯수가 3개가 넘는 경우
+				//alert로 "관심 항목은 3개까지만 선택가능합니다." 메세지 출력후
+				//체크 취소
+				let count = 0;
+				for(let i = 0; i < document.form1.elements.length; i++){
+					if(document.form1.elements[i].checked){
+						count++;
+					}
+				}
+				if(count > max){
+					alert("관심 항목은 3개까지만 선택가능합니다.");
+					obj.checked = false;//체크 취소
+				}
+			}
+		</script>
+	</body>
+</html>
