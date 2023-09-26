@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>sample2</title>
+
+</head>
+
+<body>
+	<a href="sea.jpg">화면을 변경</a>
+	<p>
+		<img src="flower.jpg" alt="꽃" />
+	</p>
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function () {
+			$("a").click(function () {
+				$("img").attr("src", "sea.jpg")
+						.attr("alt", " 바다");
+			});
+		});
+		//이벤트가 먼저 동작 -> a href 이동하므로 바꾼 img가 보이지 않고 href로 이동한다.
+	</script>
+</body>
+
+</html>

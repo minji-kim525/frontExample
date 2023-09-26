@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample20</title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+$(function(){
+	$("label,:checkbox").click(function(){
+		$("label").css("background","");
+		$(":checked").each(function(){ // check상태의 checkbox만 
+			$("label[for='"+$(this).attr("id")+"']")
+						.css("background","#CCC");
+		});//each
+	});//click
+});//ready
+		</script>
+	</head>
+	<body>
+		스킬:
+		<input type="checkbox" name="xhtml" value="XHTML" id="xhtml" />
+		<label for="xhtml">XHTML</label>
+		<input type="checkbox" name="css" value="CSS" id="css" />
+		<label for="css">CSS</label>
+		<input type="checkbox" name="javascript"value="JavaScript" id="javascript" />
+		<label for="javascript">JavaScript</label>
+		<input type="checkbox" name="php" value="PHP" id="php" />
+		<label for="php">PHP</label>
+
+	</body>
+</html>

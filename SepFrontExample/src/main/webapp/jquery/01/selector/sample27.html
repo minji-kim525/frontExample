@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>sample27</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("li:contains('샘플')").css("color", "red");
+		$("li:has(strong)").css("color", "red");
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li><strong> 텍스트</strong> 텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>샘플 샘플 샘플 샘플 샘플 샘플</li>
+
+	</ul>
+</body>
+</html>

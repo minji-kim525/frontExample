@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample12</title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+$(function(){
+	$("img").mouseover(function(){
+				$(this).attr("src","sea.jpg").attr("alt","바다");
+			})		
+			.mouseout(function(){
+				$(this).attr("src","flower.jpg").attr("alt","꽃");
+			});
+});
+		</script>
+	</head>
+	<body>
+	
+	<img src="flower.jpg" alt="꽃" />
+	
+	</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample9 </title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+$(function(){
+	$("button#fade100").click(function(){
+		$("img:not(:animated)").fadeTo("slow", 1);
+	});
+	$("button#fade50").click(function(){
+		$("img:not(:animated)").fadeTo("slow", 0.5);
+	});
+	$("button#fade0").click(function(){
+		$("img:not(:animated)").fadeTo("slow",0);
+	});
+});
+		</script>
+	</head>
+	<body>
+		<button id="fade100">표시</button>
+		<button id="fade50">반투명</button>
+		<button id="fade0">비표시</button>
+		<p><img src="flower.jpg" alt="flower" /></p>
+		<div>TESTTESTTEST</div>
+	</body>
+</html>

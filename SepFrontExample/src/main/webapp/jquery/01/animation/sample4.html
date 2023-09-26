@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample4 </title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<style type="text/css">
+div{
+	width:300px;
+	height:300px;
+	background:red;
+	display:none;
+}
+		</style>
+		<script>
+$(function(){
+	$("button#show").click(function(){
+		$("div:not(:animated)").show(5000); // :animated 애니메이션 진행중인 태그
+								//:not(:animated) 애니메이션 진행중이 아닐때만	
+	});
+	$("button#hide").click(function(){
+		$("div:not(:animated)").hide(5000);
+	});
+});
+		</script>
+	</head>
+	<body>
+		<button id="show">표시</button>
+		<button id="hide">비표시</button>
+		<div></div>
+	</body>
+</html>

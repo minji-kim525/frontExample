@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample4 </title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+$(function(){
+	// each(function(){}) : 반복. 셀렉터로 지정한 태그가 더이상 없을때까지 하나씩 꺼내서 반복
+	$("table tr").each(function(){
+		//$(this) : 현재 반복 회차에서 꺼내온 tr tag
+		//$("셀렉터", this) : 현재 태그의 자손 태그
+		
+		//$("th",this) : tr태그 안에 있는 th태그를 찾는다.
+		$(this).html("<td>"+$("th",this).text()+"는"+$("td",this).text()+"</td>");
+	});
+});
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr><th>text(...)</th><td> 텍스트를 변경한다.</td></tr>
+			<tr><th>html(...)</th><td> HTML을 변경한다.</td></tr>
+			<tr><th>prepend(...)</th><td> 태그 안의 앞부분에 HTML을 삽입한다.</td></tr>
+			<tr><th>append(...)</th><td> 태그 안의 뒷부분에 HTML을 삽입한다.</td></tr>
+			<tr><th>before(...)</th><td> 태그의 앞에 HTML을 삽입한다.</td></tr>
+			<tr><th>after(...)</th><td> 태그의 뒤에 HTML을 삽입한다.</td></tr>
+		</table>
+	</body>
+</html>

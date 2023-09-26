@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset ="UTF-8">
+		<title>xml(2)</title>
+
+		
+		<!-- 공통 css -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+
+		<!-- jQuery Framework 참조하기 -->
+	<script src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+		<!-- 사용자 스크립트 블록 -->
+		<script>
+			$(function() {
+				$("#mybtn").one("click",function() {
+					$.ajax({
+						//url: "ajax/xml/04.xml",
+						url: "ajax/xml/xmldata.jsp",						
+						type: "get",
+						//data: {"keyword":"app"}, 
+						data: "keyword=app",
+						dataType: "xml",
+						cache: false,
+						timeout: 30000,
+						success: function(xml) {
+							// 반복되는 태그 단위를 찾아서 each() 함수 사용
+							$(xml).find("subject").each(function() {
+								// 각 개별 요소에 속해 있는 텍스트 데이터 추출
+								let title = $(this).find("title").text();
+								let time = $(this).find("time").text();
+								let teacher = $(this).find("teacher").text();
+							
+								// 출력을 위한 동적 요소의 생성
+								let div = $("<div>");
+								let p1 = $("<p>").html(title);
+								let p2 = $("<p>").html(time);
+								let p3 = $("<p>").html(teacher);
+								
+								// 조립과 출력
+								div.append(p1).append(p2).append(p3);
+								$("#result").append(div);
+								$("#result").append("<hr />");
+							});
+						},
+						error: function(xhr, textStatus, errorThrown) {
+							$("div").html("<div>" + textStatus + " (HTTP-" + xhr.status + " / " + errorThrown + ")</div>" );
+						}
+					});
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<h1 class="title">$.ajax() 함수를 사용한 XML데이터 읽기 (2)</h1>
+		<div class="exec">
+			<input type="button" value="xml데이터 가져오기" id="mybtn" />
+		</div>
+		<div class="console" id="result"></div>
+	</body>
+</html>
+
+
+
+

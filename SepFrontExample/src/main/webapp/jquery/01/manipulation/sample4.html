@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>sample4</title>
+</head>
+
+<body>
+	<p id="first"><strong> 변경후</strong></p>
+	<p id="second"> 변경전</p>
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function () {
+			$("p#second").html($("p#first").html());
+		});
+	</script>
+
+</body>
+
+</html>

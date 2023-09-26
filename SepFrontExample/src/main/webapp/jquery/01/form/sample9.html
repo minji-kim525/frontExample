@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample9</title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+$(function(){
+	$(":input").focus(function(){
+		$(this).css("background","#DFEEFF");
+	}).blur(function(){
+		$(this).css("background","");
+	});
+});
+		</script>
+	</head>
+	<body>
+		<dl>
+			<dt> 이름<em>(필수)</em></dt>
+			<dd><input type="text" name="name" /></dd>
+			<dt> 연령</dt>
+			<dd>
+				<select name="age">
+					<option> 선택해주세요</option>
+					<option value="10대">10대</option>
+					<option value="20대">20대</option>
+					<option value="30대">30대</option>
+					<option value="40대이상">40대이상</option>
+				</select>
+			</dd>
+			<dt> 코멘트</dt>
+			<dd>
+				<textarea name="comment"></textarea>
+			</dd>
+		</dl>
+		<input type="reset" value="리셋" />
+		<input type="submit" value="전송" />
+		<button>확인</button>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>sample4</title>
+</head>
+
+<body>
+
+	<a href="sea.jpg">화면을 변경</a>
+
+	<p><img src="flower.jpg" alt="꽃" /></p>
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function () {
+			$("a").click(function () {
+				$("img").attr({src: "sea.jpg", alt: "바다"});
+				return false;
+			});
+		});
+	</script>
+
+</body>
+
+</html>

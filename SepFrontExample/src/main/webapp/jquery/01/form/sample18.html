@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample18</title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script>
+$(function(){
+	$(":button").click(function(){
+		if($("input[name='mail']").val() != $("input[name='check']").val()){
+			 $("em").text("메일 주소가 동일하지 않습니다.");
+			return false;
+		}
+	});
+});
+
+		</script>
+	</head>
+	<body>
+	<form action="check.html">
+	<dl>
+	<dt>메일주소</dt>
+	<dd><input type="text" name="mail" /></dd>
+	<dt>메일주소<em>(확인)</em></dt>
+	<dd><input type="text" name="check" /></dd>
+	<dd><button type="submit"> 확인</button></dd>
+	</dl>
+	</form>
+
+	</body>
+</html>

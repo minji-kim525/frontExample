@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>text(1)</title>
+
+		<!-- 공통 css -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+
+		<!-- jQuery Framework 참조하기 -->
+		<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+		
+		<!-- 사용자 스크립트 블록 -->
+		<script>
+			$(function() {
+				// 버튼의 클릭 이벤트
+				$("#mybtn").click(function() {
+					$.ajax({
+						url : "ajax/text/01.txt",
+						type : "post",
+						dataType : "text", // "json" 에러 발생
+						timeout : 30000,
+						cache : false,
+						/** 파일 읽기에 성공한 경우 */
+						}).done( function(data) {  // data <= "jQuery AJAX 테스트"
+							// dataType값이 text일 경우에는 단순히 내용에 대한 문자열이므로, 직접 HTML요소에 출력할 수 있다.
+							$("#result").html(data);
+						})
+						/** 파일 읽기에 실패한 경우 (주소 오타, 웹서버 중지 등) */
+						.fail( function(xhr, textStatus, errorThrown) {
+							$("div").html("<div>" + textStatus + " (HTTP-" + xhr.status + " / " + errorThrown + ")</div>");
+						});
+					
+				});//click
+			});//ready
+		</script>
+
+	</head>
+	<body>
+		<h1 class="title">$.ajax() 함수를 사용한 텍스트 읽기</h1>
+		<div class="exec">
+			<input type="button" value="txt파일 가져오기" id="mybtn" />
+		</div>
+		<div class="console" id="result"></div>
+	</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>sample12</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("img").mousemove(function(e) {
+			//첫번째 매개변수는 발생한 이벤트 객체를 가져옴
+			$("p").html("현재 X좌표：" + e.clientX + "<br />현재 Y좌표：" + e.clientY);
+		});
+	});
+</script>
+</head>
+<body>
+	<img src="flower.jpg" alt="꽃" />
+	<p></p>
+</body>
+</html>

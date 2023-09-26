@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sample26</title>
+</head>
+<body>
+	<p>
+		<a href="index.html">link</a>
+	</p>
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		document.write($("a").attr("href"));//html문서상의 속성값
+		document.write("<br>");
+		document.write($("a").prop("href"));//js상의 속성값
+	</script>
+</body>
+</html>

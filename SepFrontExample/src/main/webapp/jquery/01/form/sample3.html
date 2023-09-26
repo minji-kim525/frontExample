@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample3 </title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+$(function(){
+	$("input").val("입력해 주세요")
+			  .css("color","#CCC")
+			  .focus(function(){
+					$(this).val("")
+					       .css("color","#000");
+				});
+});
+		</script>
+	</head>
+	<body>
+		이름：<input type="text" value="" />
+	</body>
+</html>

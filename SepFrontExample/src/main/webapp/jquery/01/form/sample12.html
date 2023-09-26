@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample12</title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+$(function(){
+	$(":radio").click(function(){
+		$("label").css("font-weight","");//전부 초기화
+		$("label[for='"+$(this).attr("id")+"']")
+							.css("font-weight","bold");
+		//선택한 라디오버튼과 연결된 레이블만 bold 처리함.
+	});
+	$("label").click(function(){
+		$("label").css("font-weight","");//전부 초기화
+		$(this).css("font-weight","bold");
+		//클릭 이벤트가 발생한 레이블만 bold 처리함.
+	});
+});
+		</script>
+	</head>
+	<body>
+		성별:
+		<input type="radio" name="gender" value="남자" id="gender_man" />
+		<label for="gender_man">남자</label>
+		<input type="radio" name="gender" value="여자" id="gender_woman" />
+		<label for="gender_woman">여자</label>
+	</body>
+</html>
+
+
+
+
+
+
+

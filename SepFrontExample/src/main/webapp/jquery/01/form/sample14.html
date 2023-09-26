@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>sample14</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("button").click(function() {
+			//checkbox의 checked속성은 prop() 사용
+			$(":checkbox").prop("checked", true);
+			//$(":checkbox").attr("checked","checked");
+		});
+	});
+</script>
+</head>
+<body>
+	스킬:
+	<input type="checkbox" name="xhtml" value="XHTML" id="xhtml" />
+	<label for="xhtml">XHTML</label>
+	<input type="checkbox" name="css" value="CSS" id="css" />
+	<label for="css">CSS</label>
+	<input type="checkbox" name="javascript" value="JavaScript"
+		id="javascript" />
+	<label for="javascript">JavaScript</label>
+	<input type="checkbox" name="php" value="PHP" id="php" />
+	<label for="php">PHP</label>
+	<p>
+		<button>전부체크</button>
+	</p>
+
+</body>
+</html>

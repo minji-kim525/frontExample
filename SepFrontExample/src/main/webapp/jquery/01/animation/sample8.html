@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>sample8</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+img {
+	display: none;
+}
+</style>
+<script>
+	$(function() {
+		$("button#fadeIn").click(function() {
+			$("img:not(:animated)").fadeIn(5000);
+		});
+		$("button#fadeOut").click(function() {
+			$("img:not(:animated)").fadeOut(5000);
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="fadeIn">표시</button>
+	<button id="fadeOut">비표시</button>
+	<p>
+		<img src="flower.jpg" alt="flower" />
+	</p>
+	<div>TESTTESTTEST</div>
+</body>
+</html>

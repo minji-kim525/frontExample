@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>sample3</title>
+</head>
+
+<body>
+
+	<a href="javascript:void(0)">화면을 변경</a>
+	<!-- a태그를 보여주되 링크 기능은 없앰 권장하지는 않는다.-->
+
+	<p><img src="flower.jpg" alt="꽃" /></p>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function () {
+			$("a").click(function () {
+				$("img").attr("src", "sea.jpg").attr("alt", "바다");
+			});
+		});
+	</script>
+
+</body>
+
+</html>

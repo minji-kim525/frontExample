@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<school>
+	<subject>
+		<title>Java 활용</title>
+		<time>화/목 7시30분~10시30분</time>
+		<teacher>고하늘</teacher>
+	</subject>
+	<subject>
+		<title>Javascript+jQuery+Ajax</title>
+		<time>월/수/금 7시~ 오후 10시</time>
+		<teacher>박성순</teacher>
+	</subject>
+	<subject>
+		<title>반응형 웹</title>
+		<time>화/목 7시~10시</time>
+		<teacher>박성순</teacher>
+	</subject>
+</school>

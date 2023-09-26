@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample16</title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script>
+$(function(){
+	$(":image").mouseover(function(){
+		$(this).attr("src","button_on.jpg");
+	}).mouseout(function(){
+		$(this).attr("src","button.jpg");
+	});
+});
+
+		</script>
+	</head>
+	<body>
+<dl>
+        <dt>이름<em>(필수)</em></dt>
+        <dd><input type="text" name="name" /></dd>
+        <dt>코멘트</dt>
+        <dd>
+                <textarea name="comment"></textarea>
+        </dd>
+        <dd><input type="image" src="button.jpg" alt="전송" /></dd>
+</dl>
+
+	</body>
+</html>

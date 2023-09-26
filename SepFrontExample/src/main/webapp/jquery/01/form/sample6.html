@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>sample6</title>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$("select").change(function() {
+			$("span").text($(this).val());
+		});
+	});
+</script>
+</head>
+<body>
+	신청자：
+	<select>
+		<option value=" 이름">개인</option>
+		<option value="회사명">법인</option>
+	</select>
+	<p>
+		<span>이름</span><input type="text" />
+	</p>
+
+</body>
+</html>

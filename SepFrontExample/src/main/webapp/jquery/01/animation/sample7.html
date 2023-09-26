@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample7 </title>
+		<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<style type="text/css">
+dl{
+	width:300px;
+	margin:50px auto;
+}
+dl dt{
+	background:#7CADB6;
+	cursor:pointer;
+}
+dl dd{
+	border:1px solid #7CADB6;
+	height:250px;
+	margin:0;
+}
+
+		</style>
+		<script>
+$(function(){
+	$("dt").click(function(){
+		$("dd:not(:animated)").slideToggle("slow");
+	});
+});
+		</script>
+	</head>
+	<body>
+		<dl>
+			<dt>슬라이딩 효과로 표시상태를 변경한다</dt>
+			<dd>slideDown()/slideUp()는 show()/hide() 와는 다른 슬라이딩 애니메이션 효과로
+표시/비표시를 변경하는 명령입니다.
+
+			</dd>
+		</dl>
+	</body>
+</html>
