@@ -1,16 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-<title>sample6</title>
-<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-	$(function() {
-		$("select").change(function() {
-			$("span").text($(this).val());
-		});
-	});
-</script>
+	<title>mple6</title>
 </head>
+
 <body>
 	신청자：
 	<select>
@@ -20,6 +14,22 @@
 	<p>
 		<span>이름</span><input type="text" />
 	</p>
-
+	
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function () {
+			$("select").change(function () {
+				$("span").text($(this).val());
+			});
+			
+			$("input").change(function(){
+				alert($(this).val());
+			});
+			
+			//영역을 빠져나왔을 때 change 이벤트가 발생한다.
+			//글자 입력할 때마다 이벤트를 주기위해서는 key이벤트사용
+		});
+	</script>
 </body>
+
 </html>

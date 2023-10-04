@@ -1,21 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-<title>sample8</title>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script>
-	$(function() {
-		$("a").dblclick(
-				function() {
-					$("img").attr("src", $(this).attr("href"))
-							.attr("alt",$(this).text());
-				})
-			 	.click(function() {
-					return false;
-		}); 
-	});
-</script>
+	<title>sample8</title>
 </head>
+
 <body>
 	<ul>
 		<li><a href="flower.jpg">꽃</a></li>
@@ -27,5 +16,19 @@
 		<img src="flower.jpg" alt="꽃" />
 	</p>
 
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function () {
+			$("a").dblclick(function () {
+				$("img").attr("src", $(this).attr("href"))
+					.attr("alt", $(this).text());
+			})
+				.click(function() {
+					return false;
+				});
+		});
+	</script>
+
 </body>
+
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button>클릭</button>
+	<div id ="result1"></div>
+	
+	<script src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+	<script>
+		let url= "https://jsonplaceholder.typicode.com/users";
+		$(function(){
+			$("button").click(function(){
+				
+				$.getJSON(url,function(data){//ajax
+					$.each(data, function(index, user){
+						$("#result1").append(
+							`id: ${user.id}, name: ${user.name}, company:${user.company.name}<br>`
+						)
+					})
+					
+				})
+			});//click
+				
+			
+		});//ready
+		
+	</script>
+</body>
+</html>
